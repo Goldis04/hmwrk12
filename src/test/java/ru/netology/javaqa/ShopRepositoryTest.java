@@ -31,7 +31,8 @@ class ShopRepositoryTest {
 
         repo.add(product1);
         repo.add(product2);
-        repo.add(product3);;
+        repo.add(product3);
+        ;
 
         Product[] actual = repo.findAll();
         Product[] expected = {product1, product2, product3};

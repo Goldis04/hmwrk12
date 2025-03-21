@@ -32,10 +32,11 @@ public class ShopRepository {
     public Product[] findAll() {
         return products;
     }
+
     // Этот способ мы рассматривали в теории в теме про композицию
     public void remove(int id) {
         Product removingProduct = findById(id);
-        if(removingProduct == null){
+        if (removingProduct == null) {
             throw new NotFoundException(id);
         }
 
@@ -51,8 +52,8 @@ public class ShopRepository {
     }
 
     private Product findById(int id) {
-        for (Product product : products){
-            if(product.getId() == id) {
+        for (Product product : products) {
+            if (product.getId() == id) {
                 return product;
             }
         }
