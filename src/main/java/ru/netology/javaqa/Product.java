@@ -1,5 +1,7 @@
 package ru.netology.javaqa;
 
+import java.util.Objects;
+
 public class Product {
     protected int id;
     protected String title;
@@ -10,6 +12,7 @@ public class Product {
         this.title = title;
         this.price = price;
     }
+
 
     // Вспомогательные методы для корректной работы equals
     @Override
@@ -26,8 +29,25 @@ public class Product {
     }
 
     public int getId() {
+
+        return id;
     }
 
-    // геттеры + сеттеры
+    public int getPrice() {
+        return price;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+// геттеры + сеттеры
     // на id только геттер — пусть будет неизменяемым для товара
 }
